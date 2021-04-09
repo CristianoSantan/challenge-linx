@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linx</title>
-    
-    <link rel="stylesheet" href="./style.css">
 
-    <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="text/javascript" src="./scripts.js"></script>
   </head>
   <body>
     <header>
@@ -62,31 +62,61 @@
           <input class="btn" type="submit" value="Enviar">
         </form>
       </section>
-      <!-- <section id="products">
-        <h3>Sua seleção especial</h3>
-        <div>
-          <div class="card">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=5783178"
-              alt="image product"
-            />
-            <span>Nome do produto</span>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <p>ou 2x de R$9,99</p>
-            <input type="button" value="Comprar" />
-          </div>
-          <div>
-            <input type="button" value="Ainda mais produtos aqui!" />
-          </div>
+      <section class="section-products" id="products">
+        <div class="subtitle">
+          <hr>
+          <h3>Sua seleção especial</h3>
         </div>
+        <div class="cards">
+
+          <div class="card">
+            <div class="image">
+              <img
+              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=5783178"
+              alt="image product" />
+            </div>          
+            <div class="info">
+              <span>Nome do produto</span>
+              <p>
+                Descrição do produto um pouco maior, com duas linhas ou três que
+                explica melhor do que se trata.
+              </p>
+              <p>De: R$23,99</p>
+              <p>Por: R$19,99</p>
+              <p>ou 2x de R$9,99</p>
+              <input class="btn" type="button" value="Comprar" />
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img
+              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363"
+              alt="image product" />
+            </div>          
+            <div class="info">
+              <span>Nome do produto</span>
+              <p>
+                Descrição do produto um pouco maior, com duas linhas ou três que
+                explica melhor do que se trata.
+              </p>
+              <p>De: R$23,99</p>
+              <p>Por: R$19,99</p>
+              <p>ou 2x de R$9,99</p>
+              <input class="btn" type="button" value="Comprar" />
+            </div>
+          </div>
+
+        </div>
+        <div class="more">
+          <input type="button" value="Ainda mais produtos aqui!" />
+        </div>      
       </section>
-      <section id="share">
-        <h3>Compartilhe a novidade</h3>  
+      <!-- <section class="section-share" id="share">
+        <div class="subtitle">
+          <hr>
+          <h3>Compartilhe a novidade</h3>  
+        </div>
         <form action="POST">
           <p>
             Quer que seus amigos também ganhem a lista personalizada deles?
@@ -98,9 +128,9 @@
           <input type="text" name="email" id="email" />
           <input type="button" value="Enviar agora">
         </form>
-      </section>
+      </section> -->
     </main>
-    <footer>
+    <!-- <footer>
       <p>Testando suas habilidades em HTML, CSS e JS.</p>
       <p>Linx Impulse</p>
       <p>2019</p>

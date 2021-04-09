@@ -137,3 +137,106 @@ header nav a {
   border: 1px solid var(--color-dark);
   border-radius: 4px;
 }
+/* --------------------------------------------------- main .section-products */
+.section-products {
+  max-width: 992px;
+  margin: 0px auto;
+  padding: 10px;
+  color: var(--text-grey);
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: normal normal bold 18px/16px Helvetica;
+  /* background: transparent; */
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.subtitle hr {
+  left: -10px;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+}
+
+.subtitle h3 {
+  background: white;
+  padding: 0px 10px;
+}
+
+.section-products .cards {
+  margin-bottom: 30px;
+}
+
+.section-products .cards .card {
+  padding: 15px 0px;
+  display: flex;
+}
+
+.section-products .cards .card .image {
+  width: 135px;
+  height: 129px;
+  border: 1px solid var(--color-dark);
+  margin-right: 12px;
+  padding: 2px;
+  text-align: center;
+}
+
+.section-products .cards .card .image img {
+  height: 98%;
+}
+
+.section-products .cards .card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 147px);
+}
+
+.section-products .cards .card .info span {
+  font: normal normal normal 14px/16px Helvetica;
+}
+
+.section-products .cards .card .info p:nth-of-type(1) {
+  display: none;
+}
+
+.section-products .cards .card .info p:nth-of-type(2),
+.section-products .cards .card .info p:nth-of-type(4) {
+  font: normal normal normal 12px/16px Helvetica;
+}
+
+.section-products .cards .card .info p:nth-of-type(3) {
+  font: normal normal bold 16px/16px Helvetica;
+}
+
+.section-products .cards .card .info .btn {
+  height: 30px;
+  background: white;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  color: var(--text-grey);
+}
+
+.section-products .more {
+  text-align: center;
+}
+
+.section-products .more input {
+  width: 260px;
+  height: 39px;
+  background: white;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  color: var(--text-grey);
+}
+/* ----------------------------------------------------- main .section-share */
+.section-share {
+  max-width: 992px;
+  margin: 0px auto;
+  padding: 10px;
+  color: var(--text-grey);
+}
