@@ -16,6 +16,10 @@
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   margin: 0 auto;
   max-width: 992px;
@@ -174,6 +178,8 @@ header nav a {
 .section-products .cards .card {
   padding: 15px 0px;
   display: flex;
+  max-width: 350px;
+  margin: 0px auto;
 }
 
 .section-products .cards .card .image {
@@ -223,6 +229,7 @@ header nav a {
 
 .section-products .more {
   text-align: center;
+  margin-bottom: 130px;
 }
 
 .section-products .more input {
@@ -239,4 +246,65 @@ header nav a {
   margin: 0px auto;
   padding: 10px;
   color: var(--text-grey);
+}
+
+.section-share form {
+  max-width: 390px;
+  margin: auto;
+}
+
+.section-share form p {
+  font: normal normal normal 14px/16px Helvetica;
+  text-align: center;
+  margin: 28px 0px;
+}
+
+.section-share form label {
+  font: normal normal normal 12px/14px Helvetica;
+  color: var(--text-grey);
+}
+
+.section-share form input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+} 
+
+.section-share form input.btn {
+  height: 39px;
+  width: 260px;
+  color: var(--text-grey);
+  background: white;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+}
+
+.section-share form .button {
+  text-align: center;
+  margin-bottom: 85px;
+  margin-top: 22px;
+}
+/* ----------------------------------------------------------- footer */
+footer {
+  position: relative;
+  text-align: center;
+  color: var(--text-white);
+  height: 150px;
+  padding: 50px 20px;
+}
+
+footer p {
+  font: normal normal normal 12px/18px Helvetica;
+}
+
+footer div.back-footer {
+  box-sizing: initial;
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  left: 0px;
+  border-top:  50px solid transparent; 
+  border-right: 100vw solid var(--color-dark);
+  border-bottom: 120px solid var(--color-dark);
 }
