@@ -13,7 +13,7 @@
   <body>
     <header>
       <div class="fundo-header"></div>
-      <div>
+      <div class="section-header">
         <p>uma seleção de produtos</p>
         <h2>especial para você</h2>
         <p>
@@ -22,13 +22,13 @@
         </p>
       </div>
       <nav>
-        <a href="#">Conheça a Linx</a><a href="#formAjude">Ajude o algorítimo</a>
+        <a href="#">Conheça a Linx</a><a href="#formHelp">Ajude o algorítimo</a>
         <a href="#products">Seus produtos</a><a href="#share">Compartilhe</a>
       </nav>
     </header>
-    <!-- <main>
-      <section>
-        <article id="formAjude">
+    <main>
+      <section class="section-help">
+        <article id="formHelp">
           <h3>Ajude o algorítimo a ser mais certeiro</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -39,7 +39,7 @@
             lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad
             litora torquent per conubia nostra, per inceptos himenaeos.
             Vestibulum vel urna tortor. Vivamus et arcu non felis tristique
-            eleifend. Morbi eu condimentum urna. Curabitur eu magna eget turpis
+            eleifend.<br><br> Morbi eu condimentum urna. Curabitur eu magna eget turpis
             condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar
             purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra.
             Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla
@@ -55,12 +55,14 @@
           <input type="text" name="email" id="email">
           <label for="cpf">CPF:</label>
           <input type="text" name="cpf" id="cpf">
-          <input type="radio" name="genero" id="masc" value="masculino"> Masculino
-          <input type="radio" name="genero" id="fem" value="feminino"> Feminino
-          <input type="submit" value="Enviar">
+          <div class="genero">
+            <input type="radio" name="genero" id="masc" value="masculino"> Masculino
+            <input type="radio" name="genero" id="fem" value="feminino"> Feminino
+          </div>
+          <input class="btn" type="submit" value="Enviar">
         </form>
       </section>
-      <section id="products">
+      <!-- <section id="products">
         <h3>Sua seleção especial</h3>
         <div>
           <div class="card">
