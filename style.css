@@ -14,6 +14,7 @@
   list-style-type: none;
   text-decoration: none;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: var(--text-grey);
 }
 
 body {
@@ -41,19 +42,21 @@ header div.fundo-header {
 header div.section-header {
   width: 100%;
   padding-top: 50px;
-  color: var(--text-white);
 }
 
 header div.section-header p:first-child {
-  font: normal normal normal 20px/24px Helvetica;
+  font: 20px/24px Helvetica;
+  color: var(--text-white);
 }
 
 header div.section-header h2 {
-  font: normal normal bold 30px/49px Helvetica;
+  font: bold 30px/49px Helvetica;
+  color: var(--text-white);
 }
 
 header div.section-header p:last-child {
-  font: normal normal normal 13px/15px Helvetica;
+  font: 13px/15px Helvetica;
+  color: var(--text-white);
 }
 
 header nav {
@@ -73,7 +76,6 @@ header nav a {
   justify-content: center;
   margin: auto;
 
-  color: var(--text-grey);
   background: white;
   width: 120px;
   height: 40px;
@@ -81,14 +83,13 @@ header nav a {
   box-shadow: 0px 1px 6px var(--shadow);
   border: 2px solid var(--color-dark);
 
-  font: normal normal normal 13px/16px Helvetica;
+  font: 13px/16px Helvetica;
 }
-/* --------------------------------------------------- main .section-help */
+/* ---------------------------------------------------------- .section-help */
 .section-help {
   padding: 16px;
   margin: 0 auto;
   max-width: 992px;
-  color: var(--text-grey);
 }
 
 .section-help article {
@@ -97,21 +98,21 @@ header nav a {
 }
 
 .section-help article h3 {
-  font: normal normal normal 17px/24px Helvetica;
+  font: 17px/24px Helvetica;
   margin-bottom: 17px;
 }
 
 .section-help article p {
-  font: normal normal normal 12px/18px Helvetica;
+  font: 12px/18px Helvetica;
 }
 
 .section-help form {
   max-width: 390px;
-  margin: auto;
+  margin: 0px auto;
 }
 
 .section-help form label {
-  font: normal normal normal 12px/14px Helvetica;
+  font: 12px/14px Helvetica;
 }
 
 .section-help form input {
@@ -122,7 +123,7 @@ header nav a {
 }
 
 .section-help form div.genero {
-  font: normal normal normal 12px/14px Helvetica;
+  font: 12px/14px Helvetica;
 }
 
 #masc,
@@ -139,25 +140,22 @@ header nav a {
 
 .section-help form input.btn {
   height: 39px;
-  color: var(--text-grey);
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
 }
-/* --------------------------------------------------- main .section-products */
+/* ------------------------------------------------------ .section-products */
 .section-products {
   max-width: 992px;
   margin: 0px auto;
   padding: 10px;
-  color: var(--text-grey);
 }
 
 .subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: normal normal bold 18px/16px Helvetica;
-  /* background: transparent; */
+  font: bold 18px/16px Helvetica;
   position: relative;
   margin-bottom: 8px;
 }
@@ -211,21 +209,21 @@ header nav a {
 }
 
 .section-products .cards .card .info span {
-  font: normal normal normal 14px/16px Helvetica;
+  font: 14px/16px Helvetica;
 }
 
 .section-products .cards .card .info p:nth-of-type(1) {
   display: none;
-  font: normal normal normal 12px/16px Helvetica;
+  font: 12px/16px Helvetica;
 }
 
 .section-products .cards .card .info p:nth-of-type(2),
 .section-products .cards .card .info p:nth-of-type(4) {
-  font: normal normal normal 12px/16px Helvetica;
+  font: 12px/16px Helvetica;
 }
 
 .section-products .cards .card .info p:nth-of-type(3) {
-  font: normal normal bold 16px/16px Helvetica;
+  font: bold 16px/16px Helvetica;
 }
 
 .section-products .cards .card .info .btn {
@@ -233,7 +231,6 @@ header nav a {
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
-  color: var(--text-grey);
 }
 
 .section-products .more {
@@ -247,30 +244,38 @@ header nav a {
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
-  color: var(--text-grey);
 }
-/* ----------------------------------------------------- main .section-share */
+/* --------------------------------------------------------- .section-share */
 .section-share {
   max-width: 992px;
   margin: 0px auto;
   padding: 10px;
-  color: var(--text-grey);
 }
 
 .section-share form {
-  max-width: 390px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-share form p {
-  font: normal normal normal 14px/16px Helvetica;
+  font: 14px/16px Helvetica;
   text-align: center;
   margin: 28px 0px;
 }
 
-.section-share form label {
-  font: normal normal normal 12px/14px Helvetica;
-  color: var(--text-grey);
+.section-share form .field-share {
+  width: 100%;
+  max-width: 440px;
+  font: 12px/14px Helvetica;
+}
+
+.section-share form .name {
+  min-width: 340px;
+}
+
+.section-share form .email {
+  min-width: 340px;
 }
 
 .section-share form input {
@@ -283,28 +288,23 @@ header nav a {
 .section-share form input.btn {
   height: 39px;
   width: 260px;
-  color: var(--text-grey);
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
-}
-
-.section-share form .button {
-  text-align: center;
-  margin-bottom: 85px;
   margin-top: 22px;
+  margin-bottom: 85px;
 }
-/* -------------------------------------------------------------------- footer */
+/* ----------------------------------------------------------------- footer */
 footer {
   position: relative;
   text-align: center;
-  color: var(--text-white);
   height: 150px;
   padding: 50px 20px;
 }
 
 footer p {
-  font: normal normal normal 12px/18px Helvetica;
+  font: 12px/18px Helvetica;
+  color: var(--text-white);
 }
 
 footer div.back-footer {
@@ -317,7 +317,7 @@ footer div.back-footer {
   border-right: 100vw solid var(--color-dark);
   border-bottom: 120px solid var(--color-dark);
 }
-/* ------------------------------------------------------------------- Responsividade */
+/* ------------------------------------------------------------- Responsive */
 @media (min-width: 540px) {
   header div.section-header {
     text-align: center;
@@ -353,5 +353,33 @@ footer div.back-footer {
   header nav {
     grid-template-columns: repeat(4, 1fr);
     max-width: 80%;
+  }
+
+  .section-help {
+    display: flex;
+  }
+  
+  .section-help article {
+    min-width: 370px;
+    margin: 0px 20px 0px 10px;
+  }
+
+  .section-help form {
+    min-width: 300px;
+    margin: 0px 10px 0px 20px;
+  }
+
+  .section-share form .field-share {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-share form .name {
+    margin-right: 20px;
+  }
+  
+  .section-share form .email {
+    margin-left: 20px;
   }
 }
