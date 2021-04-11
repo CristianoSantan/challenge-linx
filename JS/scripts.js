@@ -15,21 +15,24 @@ function createCard(data) {
     html += `<p>ou ${product[i].installments.count}x de R$${product[i].installments.value}</p>`;
     html += `<input class="btn" type="button" value="Comprar" /></div></div>`;
   }
-
   document.querySelector("#cards").innerHTML = html;
+}
+
+// ----------------------------------------------- more products
+function moreProducts(nextPage) {
+  console.log(nextPage)
 }
 
 // ----------------------------------------------- product requisition
 
 // busca dados dos produtos em um BD externo, usando a função fetch e retornando em json.
-function fetchAPI() {
-  fetch(
-    "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
-  )
+function fetchAPI(url) {
+  fetch(url)
     .then((res) => res.json())
     .then((data) => {
       createCard(data);
+      // moreProducts(data.nextPage)
     });
 }
 
-fetchAPI();
+fetchAPI("https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1");
