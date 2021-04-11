@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linx Impulse</title>
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
 
-    <script type="text/javascript" src="./scripts.js"></script>
+    <script type="text/javascript" src="./JS/scripts.js"></script>
   </head>
   <body>
     <header>
@@ -56,114 +56,21 @@
           <label for="cpf">CPF:</label>
           <input type="text" name="cpf" id="cpf">
           <div class="genero">
-            <input type="radio" name="genero" id="masc" value="masculino"> Masculino
-            <input type="radio" name="genero" id="fem" value="feminino"> Feminino
+            <input type="radio" name="genero" id="masc" value="masculino"> 
+            <label for="masc">Masculino</label>
+            <input type="radio" name="genero" id="fem" value="feminino">
+            <label for="fem">Feminino</label> 
           </div>
           <input class="btn" type="submit" value="Enviar">
         </form>
       </section>
       <section class="section-products" id="products">
         <div class="subtitle">
-          <!-- <hr> -->
+          <hr>
           <h3>Sua seleção especial</h3>
         </div>
-        <div class="cards">
-
-          <div class="card">
-            <div class="image">
-              <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=5783178"
-              alt="image product" />
-            </div>          
-            <div class="info">
-              <span>Nome do produto</span>
-              <p>
-                Descrição do produto um pouco maior, com duas linhas ou três que
-                explica melhor do que se trata.
-              </p>
-              <p>De: R$23,99</p>
-              <p>Por: R$19,99</p>
-              <p>ou 2x de R$9,99</p>
-              <input class="btn" type="button" value="Comprar" />
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363"
-              alt="image product" />
-            </div>          
-            <div class="info">
-              <span>Nome do produto</span>
-              <p>
-                Descrição do produto um pouco maior, com duas linhas ou três que
-                explica melhor do que se trata.
-              </p>
-              <p>De: R$23,99</p>
-              <p>Por: R$19,99</p>
-              <p>ou 2x de R$9,99</p>
-              <input class="btn" type="button" value="Comprar" />
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363"
-              alt="image product" />
-            </div>          
-            <div class="info">
-              <span>Nome do produto</span>
-              <p>
-                Descrição do produto um pouco maior, com duas linhas ou três que
-                explica melhor do que se trata.
-              </p>
-              <p>De: R$23,99</p>
-              <p>Por: R$19,99</p>
-              <p>ou 2x de R$9,99</p>
-              <input class="btn" type="button" value="Comprar" />
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363"
-              alt="image product" />
-            </div>          
-            <div class="info">
-              <span>Nome do produto</span>
-              <p>
-                Descrição do produto um pouco maior, com duas linhas ou três que
-                explica melhor do que se trata.
-              </p>
-              <p>De: R$23,99</p>
-              <p>Por: R$19,99</p>
-              <p>ou 2x de R$9,99</p>
-              <input class="btn" type="button" value="Comprar" />
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363"
-              alt="image product" />
-            </div>          
-            <div class="info">
-              <span>Nome do produto</span>
-              <p>
-                Descrição do produto um pouco maior, com duas linhas ou três que
-                explica melhor do que se trata.
-              </p>
-              <p>De: R$23,99</p>
-              <p>Por: R$19,99</p>
-              <p>ou 2x de R$9,99</p>
-              <input class="btn" type="button" value="Comprar" />
-            </div>
-          </div>
-
+        <div class="cards" id="cards">
+          <!-- product requisition -->
         </div>
         <div class="more">
           <input type="button" value="Ainda mais produtos aqui!" />
@@ -171,7 +78,7 @@
       </section>
       <section class="section-share" id="share">
         <div class="subtitle">
-          <!-- <hr> -->
+          <hr>
           <h3>Compartilhe a novidade</h3>  
         </div>
         <form action="POST">
@@ -181,12 +88,12 @@
           </p>
           <div class="field-share">
             <div class="name">
-              <label for="name">Nome do seu amigo:</label>
-              <input type="text" name="name" id="name" />
+              <label for="name-share">Nome do seu amigo:</label>
+              <input type="text" name="name-share" id="name-share" />
             </div>
             <div class="email">
-              <label for="email">E-mail dele:</label>
-              <input type="text" name="email" id="email" />
+              <label for="email-share">E-mail dele:</label>
+              <input type="text" name="email-share" id="email-share" />
             </div>            
           </div>
             <input class="btn" type="submit" value="Enviar agora">

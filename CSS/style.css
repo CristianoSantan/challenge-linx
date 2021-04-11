@@ -20,7 +20,7 @@
 body {
   overflow-x: hidden;
 }
-
+/* ----------------------------------------------------------------- header */
 header {
   margin: 0 auto;
   max-width: 992px;
@@ -77,13 +77,18 @@ header nav a {
   margin: auto;
 
   background: white;
-  width: 120px;
+  width: clamp(120px, 12vw, 160px);
   height: 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 6px var(--shadow);
   border: 2px solid var(--color-dark);
 
   font: 13px/16px Helvetica;
+}
+
+header nav a:hover {
+  background: var(--color-dark);
+  color: white;
 }
 /* ---------------------------------------------------------- .section-help */
 .section-help {
@@ -143,6 +148,12 @@ header nav a {
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-help form input.btn:hover {
+  background: var(--color-dark);
+  color: white;
 }
 /* ------------------------------------------------------ .section-products */
 .section-products {
@@ -161,8 +172,8 @@ header nav a {
 }
 
 .subtitle hr {
-  left: -10px;
-  width: 100vw;
+  left: 0px;
+  width: 100%;
   z-index: -1;
   position: absolute;
 }
@@ -231,6 +242,12 @@ header nav a {
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-products .cards .card .info .btn:hover {
+  background: var(--color-dark);
+  color: white;
 }
 
 .section-products .more {
@@ -244,6 +261,12 @@ header nav a {
   background: white;
   border: 1px solid var(--color-dark);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-products .more input:hover {
+  background: var(--color-dark);
+  color: white;
 }
 /* --------------------------------------------------------- .section-share */
 .section-share {
@@ -270,14 +293,6 @@ header nav a {
   font: 12px/14px Helvetica;
 }
 
-.section-share form .name {
-  min-width: 340px;
-}
-
-.section-share form .email {
-  min-width: 340px;
-}
-
 .section-share form input {
   width: 100%;
   height: 30px;
@@ -293,6 +308,12 @@ header nav a {
   border-radius: 4px;
   margin-top: 22px;
   margin-bottom: 85px;
+  cursor: pointer;
+}
+
+.section-share form input.btn:hover {
+  background: var(--color-dark);
+  color: white;
 }
 /* ----------------------------------------------------------------- footer */
 footer {
@@ -322,10 +343,14 @@ footer div.back-footer {
   header div.section-header {
     text-align: center;
   }
+
+  .section-products .cards {
+    margin-top: 35px;
+  }
   
   .section-products .cards .card {
     padding: 0px 10px;
-    margin: 40px auto;
+    margin: 15px auto;
     flex-direction: column;
     min-width: 210px;
     max-width: 220px;
@@ -346,6 +371,14 @@ footer div.back-footer {
 
   .section-products .cards .card .info p:nth-of-type(1) {
     display: initial;
+  }
+
+  .section-share form .name {
+    min-width: 340px;
+  }
+  
+  .section-share form .email {
+    min-width: 340px;
   }
 }
 
