@@ -53,15 +53,15 @@
             </article>
             <form action="post">
               <label for="name">Seu nome:</label>
-              <input type="text" name="name" id="name" />
+              <input required type="text" name="name" id="name" />
               <label for="email">E-mail:</label>
-              <input type="text" name="email" id="email" />
+              <input required type="email" name="email" id="email" />
               <label for="cpf">CPF:</label>
-              <input type="text" name="cpf" id="cpf" />
+              <input required type="number" name="cpf" id="cpf" />
               <div class="genero">
                 <input type="radio" name="genero" id="masc" value="masculino" />
                 <label for="masc">Masculino</label>
-                <input type="radio" name="genero" id="fem" value="feminino" />
+                <input required type="radio" name="genero" id="fem" value="feminino" />
                 <label for="fem">Feminino</label>
               </div>
               <input class="btn" type="submit" value="Enviar" />
@@ -89,20 +89,24 @@
               <hr />
               <h3>Compartilhe a novidade</h3>
             </div>
-            <form action="POST">
+            <form id="form-share" action="POST">
               <p>
                 Quer que seus amigos também ganhem a lista personalizada deles?
                 Preencha agora!
               </p>
               <div class="field-share">
+
                 <div class="name">
                   <label for="name-share">Nome do seu amigo:</label>
-                  <input type="text" name="name-share" id="name-share" />
+                  <input required type="text" name="name-share" id="name-share" />
+                  <span class="error"></span>
                 </div>
                 <div class="email">
                   <label for="email-share">E-mail dele:</label>
-                  <input type="text" name="email-share" id="email-share" />
+                  <input required type="email" name="email-share" id="email-share" />
+                  <span class="error"></span>
                 </div>
+
               </div>
               <input class="btn" type="submit" value="Enviar agora" />
             </form>
