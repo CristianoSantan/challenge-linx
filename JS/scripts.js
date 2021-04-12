@@ -1,38 +1,47 @@
-// ----------------------------------------------- Function to create the product card
-
-// recebe dados da fetchAPI() e retorna um loop das informações de cada produto.
+// -------------------------------------------------------- Create the product card
+// receives data from fetchAPI () and returns 
+// a loop the information for each product.
 function createCard(data) {
-  var product = data.products;
-  var html = "";
-
-  for (var i = 0; i < product.length; i++) {
-    html += `<div class="card">`;
-    html += `<div class="image"><img src="${product[i].image}" alt="product"/></div>`;
-    html += `<div class="info">`;
-    html += `<span>${product[i].name}</span><p>${product[i].description}</p> `;
-    html += `<p>De: R$${product[i].oldPrice},00</p>`;
-    html += `<p>Por: R$${product[i].price},00</p>`;
-    html += `<p>ou ${product[i].installments.count}x de R$${product[i].installments.value}</p>`;
-    html += `<input class="btn" type="button" value="Comprar" /></div></div>`;
-  }
-  document.querySelector("#cards").innerHTML = html;
+  var html = data
+    .map(
+      (item) => `
+    <div class="card">
+      <div class="image">
+        <img src="${item.image}" alt="product"/>
+      </div>
+      <div class="info">
+        <span>${item.name}</span>
+        <p>${item.description}</p>
+        <p>De: R$${item.oldPrice},00</p>
+        <p>Por: R$${item.price},00</p>
+        <p>ou ${item.installments.count}x de R$${item.installments.value}</p>
+      <input class="btn" type="button" value="Comprar"/>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+  document.querySelector("#cards").innerHTML += html;
 }
 
-// ----------------------------------------------- more products
-function moreProducts(nextPage) {
-  console.log(nextPage)
-}
+// -------------------------------------------------------- Product requisition
+// fetches product data from an external database,
+// using the fetch method and returning in json.
+const getAPI = async (url) => {
+  const response = await fetch(url);
+  return response.json();
+};
 
-// ----------------------------------------------- product requisition
+let url = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
 
-// busca dados dos produtos em um BD externo, usando a função fetch e retornando em json.
-function fetchAPI(url) {
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      createCard(data);
-      // moreProducts(data.nextPage)
-    });
-}
+// Stores the Array in the variable and updates the url with the next page,
+// doing every click you search for new products.
+// and use the createCard () function to render the divs for more products
+const main = async () => {
+   let data = await getAPI(url);
+    url = `//${data.nextPage}`;
+    createCard(data.products);
+};
 
-fetchAPI("https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1");
+main();
+
