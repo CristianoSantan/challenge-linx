@@ -51,7 +51,7 @@ header div.fundo-header {
   z-index: -1;
   top: 0rem;
   right: 0rem;
-  border-top: 27rem solid var(--color-dark);
+  border-top: 26.0rem solid var(--color-dark);
   border-right: 100vw solid var(--color-dark);
   border-bottom: 11.8rem solid transparent;
 }
@@ -79,8 +79,8 @@ header div.section-header p:last-child {
 header nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  margin-top: 4rem;
+  grid-gap: 1.0rem;
+  margin-top: 5.0rem;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -92,9 +92,9 @@ header nav a {
   align-items: center;
   justify-content: center;
   margin: auto;
-
+  margin-bottom: 1.0rem;
   background: white;
-  width: clamp(12.0rem, 12vw, 16.0rem);
+  width: clamp(13.0rem, 12vw, 16.0rem);
   height: 4.0rem;
   border-radius: .4rem;
   box-shadow: 0rem .1rem .6rem var(--shadow);
