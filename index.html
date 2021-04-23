@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Linx Impulse</title>
 
     <link rel="stylesheet" href="./CSS/style.css" />
@@ -23,14 +24,14 @@
           </div>
           <nav>
             <a href="#">Conheça a Linx</a>
-            <a href="#formHelp">Ajude o algorítimo</a>
+            <a href="#section-help">Ajude o algorítimo</a>
             <a href="#products">Seus produtos</a>
             <a href="#share">Compartilhe</a>
           </nav>
         </header>
         <main>
-          <section class="section-help">
-            <article id="formHelp">
+          <section id="section-help" class="section-help">
+            <article>
               <h3>Ajude o algorítimo a ser mais certeiro</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -51,18 +52,28 @@
                 suscipit libero, at mattis augue est vel metus.
               </p>
             </article>
-            <form action="post">
-              <label for="name">Seu nome:</label>
-              <input required type="text" name="name" id="name" />
-              <label for="email">E-mail:</label>
-              <input required type="email" name="email" id="email" />
-              <label for="cpf">CPF:</label>
-              <input required type="number" name="cpf" id="cpf" />
+            <form id="form-help" action="post">
+              <div class="name-help">
+                <label for="name">Seu nome:</label>
+                <input required type="text" name="name" id="name" />
+                <span class="error"></span>
+              </div>
+              <div class="email-help">
+                <label for="email">E-mail:</label>
+                <input required type="email" name="email" id="email" />
+                <span class="error"></span>
+              </div>
+              <div class="cpf-help">
+                <label for="cpf">CPF:</label>
+                <input required type="text" name="cpf" id="cpf" placeholder="Ex.: 000.000.000-​00" minlength="11" maxlength="11"/>
+                <span class="error"></span>
+              </div>              
               <div class="genero">
-                <input type="radio" name="genero" id="masc" value="masculino" />
+                <input required type="radio" name="genero" id="masc" value="masculino" />
                 <label for="masc">Masculino</label>
                 <input required type="radio" name="genero" id="fem" value="feminino" />
                 <label for="fem">Feminino</label>
+                <span class="error"></span>
               </div>
               <input class="btn" type="submit" value="Enviar" />
             </form>

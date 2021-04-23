@@ -8,7 +8,7 @@
   --text-white: #ffffff;
   --text-grey: #888888;
   --shadow: #00000029;
-  --bg-color: #ffffff;
+  --bg-color: #fff;
 }
 
 * {
@@ -23,12 +23,11 @@
 }
 
 html {
-  width: 100vw;
+  width: 100%;
   font-size: 62.5%;
 }
 
 body {
-  height: 100vh;
   width: 100vw;
   background-color: var(--bg-color);
   overflow-x: hidden;
@@ -36,7 +35,7 @@ body {
 
 .section-body {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 .container {
@@ -50,14 +49,14 @@ header {
 }
 
 header div.fundo-header {
-  box-sizing: initial;
   position: absolute;
   z-index: -1;
   top: 0rem;
   right: 0rem;
-  border-top: 26.0rem solid var(--color-dark);
-  border-right: 100vw solid var(--color-dark);
-  border-bottom: 11.8rem solid transparent;
+  width: 100%;
+  height: 42rem;
+  background: var(--color-dark);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
 }
 
 header div.section-header {
@@ -71,8 +70,9 @@ header div.section-header p:first-child {
 }
 
 header div.section-header h2 {
-  font: bold clamp(2.9rem, 10vw, 4.0rem)/4.9rem "Helvetica Neue";
+  font: bold clamp(2.9rem, 10vw, 4.0rem)/5rem "Helvetica Neue";
   color: var(--text-white);
+  margin-bottom: 3rem;
 }
 
 header div.section-header p:last-child {
@@ -114,6 +114,7 @@ header nav a:hover {
 /* ---------------------------------------------------------- .section-help */
 .section-help {
   padding: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 .section-help article {
@@ -139,11 +140,18 @@ header nav a:hover {
   font: 1.2rem/1.4rem "Helvetica Neue";
 }
 
+.name-help,
+.email-help,
+.cpf-help {
+  margin-bottom: 2rem;
+  color: red;
+}
+
 .section-help form input {
   min-width: 100%;
   height: 3.0rem;
-  margin-bottom: 2.0rem;
   margin-top: .7rem;
+  padding: 0 1rem;
 }
 
 .section-help form div.genero {
@@ -211,7 +219,7 @@ header nav a:hover {
   padding: 1.5rem 0rem;
   display: flex;
   min-width: 27.0rem;
-  max-width: 29.0rem;
+  max-width: 34.0rem;
   margin: 0rem auto;
   flex: 1 1 20.0rem;
 }
@@ -321,8 +329,7 @@ header nav a:hover {
   margin-bottom: 2.0rem;
 }
 
-.section-share form .field-share .name span.error,
-.section-share form .field-share .email span.error {
+span.error {
   margin-top: .1rem;
   display: flex;
   padding: 0rem;
@@ -331,8 +338,7 @@ header nav a:hover {
   font-weight: bold;
 }
 
-.section-share form .field-share .name span.error.active,
-.section-share form .field-share .email span.error.active {
+span.error.active {
   border: .1rem solid red;
   padding: 0.4rem;
 }
@@ -365,14 +371,14 @@ footer p {
 }
 
 div.back-footer {
-  box-sizing: initial;
   position: absolute;
   z-index: -1;
   bottom: 0rem;
   right: 0rem;
-  border-top:  5.0rem solid transparent; 
-  border-right: 100vw solid var(--color-dark);
-  border-bottom: 12.0rem solid var(--color-dark);
+  width: 100%;
+  height: 18rem;
+  background: var(--color-dark);
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
 }
 /* ------------------------------------------------------------- Responsive */
 @media (min-width: 540px) {
@@ -429,12 +435,13 @@ div.back-footer {
   }
   
   .section-help article {
-    min-width: 37.0px;
-    margin: 0px 2.0px 0px 1.0px;
+    min-width: 37.0rem;
+    margin: 0rem 3rem 0rem 1.0rem;
   }
 
   .section-help form {
     min-width: 30.0rem;
+    width: 100%;
     margin: 0rem 1.0rem 0rem 2.0rem;
   }
 

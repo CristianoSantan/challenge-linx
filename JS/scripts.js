@@ -2,25 +2,22 @@
 // receives data from fetchAPI () and returns 
 // a loop the information for each product.
 function createCard(data) {
-  var html = data
-    .map(
-      (item) => `
-    <div class="card">
-      <div class="image">
-        <img src="${item.image}" alt="product"/>
-      </div>
-      <div class="info">
-        <span>${item.name}</span>
-        <p>${item.description}</p>
-        <p>De: R$${item.oldPrice},00</p>
-        <p>Por: R$${item.price},00</p>
-        <p>ou ${item.installments.count}x de R$${item.installments.value}</p>
-      <input class="btn" type="button" value="Comprar"/>
-      </div>
-    </div>
-  `
-    )
-    .join("");
+  var html = data.map(item => `
+      <div class="card">
+        <div class="image">
+          <img src="${item.image}" alt="product"/>
+        </div>
+        <div class="info">
+          <span>${item.name}</span>
+          <p>${item.description}</p>
+          <p>De: R$${item.oldPrice},00</p>
+          <p>Por: R$${item.price},00</p>
+          <p>ou ${item.installments.count}x de 
+          R$${item.installments.value.toFixed(2).replace(".", ",")}</p>
+        <input class="btn" type="button" value="Comprar"/>
+        </div>
+      </div>`
+  ).join("");
   document.querySelector("#cards").innerHTML += html;
 }
 
@@ -72,6 +69,9 @@ function validateField(field) {
       email: {
         valueMissing: "* Email é obrigatório",
         typeMismatch: "* Por favor, preencha um email válido"
+      },
+      radio: {
+        valueMissing: "* Selecione uma das opções"
       }
     }
     return messages[field.type][typeError]
@@ -117,10 +117,18 @@ for ( field of fields ) {
   })
   field.addEventListener("blur", customValidation)
 }
+
 // Não enviar o formulario ao submeter 
 document.querySelector("#form-share")
 .addEventListener("submit", event => {
-  console.log("enviar o formulário")
+  console.log("formulário share enviado")
+  // não envia o formuário
+  event.preventDefault()
+})
+// Não enviar o formulario ao submeter 
+document.querySelector("#form-help")
+.addEventListener("submit", event => {
+  console.log("formulário help enviado")
   // não envia o formuário
   event.preventDefault()
 })
